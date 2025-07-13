@@ -1,4 +1,4 @@
-principal = 1000
+principal 
 rate = 0.05
 time = 3
 
