@@ -12,7 +12,7 @@ match priority:
     case _:
         print(f"Reminder: '{task}' has an UNKNOWN priority.", end="")
 
-if time_bound.lower() == "yes":
+if time_bound == "yes":
     print(" It requires immediate attention today!")
 else:
     print()
