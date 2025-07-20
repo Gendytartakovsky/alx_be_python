@@ -1,16 +1,18 @@
-Task = input("Enter your task: ")
-Priority = input("Priority (high/medium/low): ")
-Time_bound = input("Is it time-bound? (yes/no): ")
+task = input("Enter the task description: ")
+priority = input("Priority (high/medium/low): ")
+time_bound = input("Is it time-bound? (yes/no): ")
 
-match Priority:
+match priority.lower():
     case "high":
-        reminder = f"Reminder: '{Task}' is a HIGH priority task."
+        print(f"Reminder: '{task}' is a HIGH priority task.", end="")
     case "medium":
-        reminder = f"Reminder: '{Task}' is a MEDIUM priority task."
+        print(f"Reminder: '{task}' is a MEDIUM priority task.", end="")
     case "low":
-        reminder = f"Reminder: '{Task}' is a LOW priority task."
+        print(f"Reminder: '{task}' is a LOW priority task.", end="")
     case _:
-        reminder = f"Reminder: '{Task}' has an UKNOWN priority."
-if Time_bound == "yes":
-    reminder += " It requires immediate attention today!"
-print(reminder)
+        print(f"Reminder: '{task}' has an UNKNOWN priority.", end="")
+
+if time_bound.lower() == "yes":
+    print(" It requires immediate attention today!")
+else:
+    print()
