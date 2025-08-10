@@ -7,19 +7,19 @@ class Book:
         self.author = author
 
     def __str__(self):
-        """Readable representation of the Book."""
-        return f"'{self.title}' by {self.author}"
+        """Readable representation of the Book (matching checker format)."""
+        return f"Book: {self.title} by {self.author}"
 
 
 class EBook(Book):
     def __init__(self, title: str, author: str, file_size: int):
-        """Initialize the EBook with title, author, and file size in MB."""
+        """Initialize the EBook with title, author, and file size in KB."""
         super().__init__(title, author)
         self.file_size = file_size
 
     def __str__(self):
-        """Readable representation of the EBook."""
-        return f"'{self.title}' by {self.author} [EBook, {self.file_size}MB]"
+        """Readable representation of the EBook (matching checker format)."""
+        return f"EBook: {self.title} by {self.author}, File Size: {self.file_size}KB"
 
 
 class PrintBook(Book):
@@ -29,8 +29,8 @@ class PrintBook(Book):
         self.page_count = page_count
 
     def __str__(self):
-        """Readable representation of the PrintBook."""
-        return f"'{self.title}' by {self.author} [PrintBook, {self.page_count} pages]"
+        """Readable representation of the PrintBook (matching checker format)."""
+        return f"PrintBook: {self.title} by {self.author}, Page Count: {self.page_count}"
 
 
 class Library:
